@@ -40,8 +40,8 @@ usersRoutes.route('/update/:id').post(function(req, res){
         else{
             users.username = req.body.username;
             users.password = req.body.password;
-            users.firstName = req.body.firstName;
-            users.lastName = req.body.lastName;
+            users.first_name = req.body.first_name;
+            users.last_name = req.body.last_name;
 
             users.save().then(users => {
                 res.json('Update complete');
@@ -59,4 +59,4 @@ usersRoutes.route('/delete/:id').get(function(req, res){
     });
 });
 
-module.exports = businessRoutes;
+module.exports = usersRoutes;
