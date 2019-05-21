@@ -14,5 +14,8 @@
     "express": "^4.16.4",
     "mongodb-autoincrement": "^1.0.1",
     "mongojs": "^2.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
   }
 }
