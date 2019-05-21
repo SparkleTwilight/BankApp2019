@@ -11,10 +11,10 @@ let Users = new Schema({
     password: {
         type: String
     },
-    firstName: {
+    first_name: {
         type: String
     },
-    lastName: {
+    last_name: {
         type: String
     }
 
