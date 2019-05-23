@@ -1,4 +1,4 @@
-const express = require('express');
+/*const express = require('express');
 const mongojs = require('mongojs');
 var ObjectId = mongojs.ObjectID;
 const bodyParser = require('body-parser');
@@ -49,3 +49,4 @@ app.delete('/api/clients/:id', function (req,res) {
 app.listen(3000, function () {
   console.log("Listening on port 27017 !!!");
 });
+*/
