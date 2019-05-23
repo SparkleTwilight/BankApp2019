@@ -20,7 +20,7 @@ let Users = new Schema({
 
 
 },{
-    collection: 'users'
+    collection: 'bankApp'
 });
 
 module.exports = mongoose.model('Users', Users);
