@@ -1,0 +1,29 @@
+
+
+.wrapper {
+    width: auto;
+    align-content: center;
+    background-image: url("buy-cash-coins-2116.jpg");
+    background-size: cover;
+    
+  
+  }
+  
+  #login {
+    text-align: center; 
+    font-size: 150%;
+  }
+  
+  .example-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .example-container > * {
+      max-width: 50%;
+    }
+  
+    #create {
+      text-align: center;
+    }

@@ -1,0 +1,19 @@
+.mat-card {
+    color: white;
+    background-color: blue;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+.navbar {
+    padding-top: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    
+  }  
+
+span{
+    padding-right: 1rem;
+}
+
