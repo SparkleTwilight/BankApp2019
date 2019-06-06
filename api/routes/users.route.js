@@ -9,7 +9,7 @@ let Users = require('../models/Users');
 usersRoutes.route('/add').post(function ( req, res){
     let users = new Users(req.body);
     users.save().then(users => {
-        res.status(200).json({'user': 'user added successfully'});
+        res.status(200).json({'users': 'user added successfully'});
     }).catch(err => {
         res.status(400).send("unable to send to database");
     });

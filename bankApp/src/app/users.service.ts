@@ -19,6 +19,6 @@ export class UsersService {
 
     };
     console.log(obj);
-    this.http.post(this.uri, obj).subscribe(res => console.log('Done'));
+    this.http.post('${this.uri}/add', obj).subscribe(res => console.log('Done'));
   }
 }

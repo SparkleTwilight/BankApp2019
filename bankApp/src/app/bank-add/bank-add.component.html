@@ -10,7 +10,7 @@
             <form [formGroup] = "newForm" (ngSubmit)="onSubmit()">
                     <div>
                         <mat-form-field>
-                            <input type="text"  formControlName="username" matInput placeholder="Username">
+                            <input type="text"  formControlName="username" matInput placeholder="Username" #username>
                         </mat-form-field>
                     </div>
                     <div *ngIf="newForm.controls['username'].invalid && (newForm.controls['username'].dirty || newForm.controls['username'].touched)" class="alert alert-danger">
@@ -21,7 +21,7 @@
                 
                     <div>
                         <mat-form-field>
-                            <input type="password" formControlName="password" matInput placeholder="Password">
+                            <input type="password" formControlName="password" matInput placeholder="Password" #password>
                         </mat-form-field>
                     </div> 
                     <div *ngIf="newForm.controls['password'].invalid && (newForm.controls['password'].dirty || newForm.controls['password'].touched)" class="alert alert-danger">
@@ -32,24 +32,24 @@
                  
                     <div>
                         <mat-form-field>
-                            <input type="text" formControlName="first_name" matInput placeholder="First Name">
+                            <input type="text" formControlName="first_name" matInput placeholder="First Name" #first_name>
                         </mat-form-field> 
                     </div>
                  
                     <div>
                         <mat-form-field>
-                            <input type="text" formControlName="last_name" matInput placeholder="Last Name">
+                            <input type="text" formControlName="last_name" matInput placeholder="Last Name" #last_name>
                         </mat-form-field>
                     </div>
                     <br>
-                  
+                    <div>
+                        <button (click)="addUsers(username.value, password.value, first_name.value, last_name.value)" mat-raised-button color="primary" type="submit"  [disabled]="newForm.pristine || newForm.invalid">Submit</button>
+                    </div>
                     <br>
                 </form>
      
                 <br>
-                <div>
-                    <button (click)="addUsers(username.value, password.value, first_name.value, last_name.value)" mat-raised-button color="primary" type="submit"  [disabled]="newForm.pristine || newForm.invalid">Submit</button>
-                </div>
+               
             <br>
     </div>          
 </div>
