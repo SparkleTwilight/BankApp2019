@@ -4,12 +4,21 @@ const express = require('express');
 const app = express();
 const usersRoutes = express.Router();
 
+<<<<<<< HEAD
 let Users = require('../models/Users');
 
 usersRoutes.route('/add').post(function ( req, res){
     let users = new Users(req.body);
     users.save().then(users => {
         res.status(200).json({'user': 'user added successfully'});
+=======
+let Users = require('../models/Users.js');
+
+usersRoutes.route('/add').post(function (req, res){
+    let users = new Users(req.body);
+    users.save().then(users => {
+        res.status(200).json({'users': 'user added successfully'});
+>>>>>>> dev
     }).catch(err => {
         res.status(400).send("unable to send to database");
     });

@@ -17,7 +17,11 @@ let Users = new Schema({
     type: String
   }
 },{
+<<<<<<< HEAD
     collection: 'bankApp'
+=======
+    collection: 'users'
+>>>>>>> dev
 });
 
 module.exports = mongoose.model('Users', Users);
