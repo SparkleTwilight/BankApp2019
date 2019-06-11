@@ -1,0 +1,51 @@
+<div class = wrapper>
+ 
+  <br>
+  <br>
+      <div id="login">
+          <p>Log In Here!</p>
+        </div>
+        <br>
+        <div class="example-container">
+          <form class="example-container" [formGroup]="loginForm">
+            <mat-form-field>
+              <input type="text" formControlName="username" required matInput placeholder="Username">
+            </mat-form-field>
+            <div *ngIf="loginForm.controls['username'].invalid && (loginForm.controls['username'].dirty || loginForm.controls['username'].touched)" class="alert alert-danger">
+              <div *ngIf="loginForm.controls['username'].errors.required">
+                  Username is required.
+              </div>
+            </div>
+          
+            <mat-form-field>
+              <input type="password" formControlName="password" required matInput placeholder="Password">
+            </mat-form-field>
+            <div *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)" class="alert alert-danger">
+              <div *ngIf="loginForm.controls['password'].errors.required">
+                  Password is required.
+              </div>
+            </div>
+            <br>
+        
+            <div>
+                <button type="submit" mat-raised-button color="primary">Submit</button> 
+            </div>
+          </form>      
+        </div>
+        <br>
+        <br>
+        <br>
+        <div>
+          <div id="create">
+            <p>Don't Have An Account?  Create A New One Here!</p>
+          </div>
+  <br>
+          <div class="example-container">
+             <button routerLink="/create/bank-add" mat-raised-button color="primary">Create New Account</button>   
+        </div>
+        </div>
+  <br>
+  <br>
+  <p> Form Status: {{loginForm.status}}</p>
+  </div>
+  

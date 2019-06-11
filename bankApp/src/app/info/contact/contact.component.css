@@ -1,0 +1,9 @@
+.wrapper{
+    background-color: blue;
+    text-align: center;
+    color: white;
+}
+
+mat-card{
+    background-color: bisque;
+}

@@ -1,0 +1,21 @@
+.wrapper{
+    width: auto;
+    height: auto;
+    align-content: center;
+    text-align: center;
+    color: white;
+    background-color: blue;
+
+}
+
+mat-card {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+    background-size: cover;
+    }
+
+p{
+    text-align: justify;
+}
