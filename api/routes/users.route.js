@@ -4,9 +4,9 @@ const express = require('express');
 const app = express();
 const usersRoutes = express.Router();
 
-let Users = require('../models/Users');
+let Users = require('../models/Users.js');
 
-usersRoutes.route('/add').post(function ( req, res){
+usersRoutes.route('/add').post(function (req, res){
     let users = new Users(req.body);
     users.save().then(users => {
         res.status(200).json({'users': 'user added successfully'});
