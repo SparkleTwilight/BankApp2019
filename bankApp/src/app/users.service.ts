@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UsersService {
 
-  uri = 'http://localhost:4000/users';
+  //uri = 'http://localhost:3000/users';
 
   constructor(private http: HttpClient) { }
 
@@ -16,9 +16,8 @@ export class UsersService {
       password: password,
       first_name: first_name,
       last_name: last_name
-
     };
     console.log(obj);
-    this.http.post('${this.uri}/add', obj).subscribe(res => console.log('Done'));
+    this.http.post('http://localhost:3000/users/add', obj).subscribe(res => console.log('Done'));
   }
 }

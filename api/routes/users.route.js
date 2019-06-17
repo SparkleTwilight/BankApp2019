@@ -5,6 +5,7 @@ const app = express();
 const usersRoutes = express.Router();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 let Users = require('../models/Users');
 
 usersRoutes.route('/add').post(function ( req, res){
@@ -13,14 +14,18 @@ usersRoutes.route('/add').post(function ( req, res){
         res.status(200).json({'user': 'user added successfully'});
 =======
 let Users = require('../models/Users.js');
+=======
+let Users = require('../models/Users');
+>>>>>>> dev
 
 usersRoutes.route('/add').post(function (req, res){
     let users = new Users(req.body);
-    users.save().then(users => {
+    users.save()
+    .then(users => {
         res.status(200).json({'users': 'user added successfully'});
 >>>>>>> dev
     }).catch(err => {
-        res.status(400).send("unable to send to database");
+        res.status(400).send("unable to save to database");
     });
 });
 
